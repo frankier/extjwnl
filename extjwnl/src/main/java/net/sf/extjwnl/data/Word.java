@@ -52,6 +52,8 @@ public class Word extends PointerTarget {
      */
     public Word(Dictionary dictionary, Synset synset, String lemma) {
         super(dictionary);
+        System.out.println(synset.toString());
+        System.out.println(lemma);
         if (null == synset) {
             if (null != dictionary) {
                 throw new IllegalArgumentException(dictionary.getMessages().resolveMessage("DICTIONARY_EXCEPTION_042"));
