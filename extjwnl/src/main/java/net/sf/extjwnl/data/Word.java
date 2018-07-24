@@ -74,13 +74,6 @@ public class Word extends PointerTarget {
                 throw new IllegalArgumentException("Lemma must be not null and not empty");
             }
         }
-        if (' ' == lemma.charAt(0) || ' ' == lemma.charAt(lemma.length() - 1)) {
-            if (null != dictionary) {
-                throw new IllegalArgumentException(dictionary.getMessages().resolveMessage("DICTIONARY_EXCEPTION_055"));
-            } else {
-                throw new IllegalArgumentException("Lemma should not be surrounded by spaces");
-            }
-        }
         this.lemma = lemma;
     }
 
